@@ -87,3 +87,71 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
+
+.resume {
+  max-width: 85ch;
+  margin-inline: auto;
+  font-size: 0.95rem;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.resume-header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.resume section {
+  margin-bottom: 1.5rem;
+}
+
+.resume section h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid oklch(80% 3% 200);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.resume-item {
+  margin-bottom: 1rem;
+}
+
+.resume-topline,
+.resume-subline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.resume-topline {
+  font-weight: 600;
+}
+
+.resume-subline {
+  font-style: italic;
+  margin-bottom: 0.35rem;
+}
+
+.resume ul {
+  margin: 0.35rem 0 0 1.2rem;
+  padding: 0;
+}
+
+.resume li {
+  margin-bottom: 0.25rem;
+}
+
+.resume p {
+  margin: 0.35rem 0;
+}
