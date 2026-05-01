@@ -182,3 +182,68 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-size: 2rem;
 }
+
+.project-year {
+  font-family: Georgia, serif;
+  font-variant-numeric: oldstyle-nums;
+  font-style: italic;
+  color: grey;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+
+#projects-pie-plot path {
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 0.5em 1em;
+
+    list-style: none;
+    padding: 1em;
+    margin-block: 1em 2em;
+
+    border: 1px solid lightgray;
+
+    flex: 1;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.swatch {
+    display: inline-block;
+    width: 1em;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color);
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.selected {
+    --color: oklch(60% 45% 0) !important;
+}
+
+path.selected {
+    fill: var(--color);
+}
