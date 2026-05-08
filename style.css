@@ -333,6 +333,20 @@ dl.info dd {
     z-index: 10;
 }
 
+html[style*="color-scheme: dark"] .tooltip {
+    background-color: rgb(35 35 35 / 0.95);
+    color: white;
+    border-color: #666;
+}
+
+html[style*="color-scheme: dark"] .tooltip a {
+    color: #8ab4ff;
+}
+
+html[style*="color-scheme: dark"] .tooltip dt {
+    color: #d0d0d0;
+}
+
 .top-gridline {
     stroke: #999;
     stroke-width: 1.5;
