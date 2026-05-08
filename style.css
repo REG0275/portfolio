@@ -324,8 +324,9 @@ dl.info dd {
     position: fixed;
     top: 1rem;
     left: 1rem;
-    background-color: rgb(255 255 255 / 0.95);
-    border: 1px solid #ddd;
+    background-color: Canvas;
+    color: CanvasText;
+    border: 1px solid GrayText;
     border-radius: 0.5rem;
     padding: 0.75rem 1rem;
     box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
@@ -333,18 +334,13 @@ dl.info dd {
     z-index: 10;
 }
 
-html[style*="color-scheme: dark"] .tooltip {
-    background-color: rgb(35 35 35 / 0.95);
-    color: white;
-    border-color: #666;
+.tooltip a {
+    color: LinkText;
 }
 
-html[style*="color-scheme: dark"] .tooltip a {
-    color: #8ab4ff;
-}
-
-html[style*="color-scheme: dark"] .tooltip dt {
-    color: #d0d0d0;
+.tooltip dt {
+    color: CanvasText;
+    opacity: 0.75;
 }
 
 .top-gridline {
