@@ -255,3 +255,146 @@ path.selected {
     margin-block: 1em 2em;
     font: inherit;
 }
+
+#stats {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+#stats h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem 1rem;
+    margin: 0;
+}
+
+.stats dt {
+    grid-row: 1;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: bold;
+}
+
+.stats dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.gridlines line {
+    stroke: #ddd;
+    stroke-opacity: 0.8;
+}
+
+.gridlines .domain {
+    display: none;
+}
+
+dl.info {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 0.25rem 1rem;
+    margin: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+dl.info dt {
+    color: #666;
+    font-weight: bold;
+}
+
+dl.info dd {
+    margin: 0;
+}
+
+.tooltip {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgb(255 255 255 / 0.95);
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+}
+
+.top-gridline {
+    stroke: #999;
+    stroke-width: 1.5;
+}
+
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
+}
+
+@keyframes marching-ants {
+    to {
+        stroke-dashoffset: -8;
+    }
+}
+
+.selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
+#selection-count {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+circle.selected {
+    fill: #ff6b6b;
+}
+
+#language-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 10rem));
+    justify-content: center;
+    gap: 0.5rem 3rem;
+    margin-top: 1.5rem;
+    border: none;
+    padding: 0;
+    text-align: center;
+}
+
+#language-breakdown dt {
+    grid-row: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+#language-breakdown dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: 1.75rem;
+    line-height: 1.4;
+}
